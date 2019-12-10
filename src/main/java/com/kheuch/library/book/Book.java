@@ -1,5 +1,6 @@
 package com.kheuch.library.book;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,9 +23,14 @@ import com.kheuch.library.loan.LoanId;
 
 @Entity
 @Table(name="Book")
-public class Book {
+public class Book implements Serializable{
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="Book_Id")
