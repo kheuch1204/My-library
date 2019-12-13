@@ -5,16 +5,16 @@ import java.util.List;
 
 public interface ILoanService {
 	
-public List<Loan> findAllLoansByEndDateBefore(LocalDate maxEndDate);
+List<Loan> findAllLoansByEndDateBefore(LocalDate maxEndDate);
     
-    public List<Loan> getAllOpenLoansOfThisCustomer(String email, LoanStatus status);
+    List<Loan> getAllOpenLoansOfThisCustomer(String email, LoanStatus status);
     
-    public Loan getOpenedLoan(SimpleLoanDTO simpleLoanDTO);
+    Loan getOpenedLoan(SimpleLoanDTO simpleLoanDTO);
     
-    public boolean checkIfLoanExists(SimpleLoanDTO simpleLoanDTO);
+    boolean checkIfLoanExists(SimpleLoanDTO simpleLoanDTO);
     
-    public Loan saveLoan(Loan loan);
+    Loan saveLoan(Loan loan);
     
-    public void closeLoan(Loan loan);
+    void closeLoan(Loan loan);
 
 }

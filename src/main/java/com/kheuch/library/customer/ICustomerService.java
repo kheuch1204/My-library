@@ -5,17 +5,17 @@ import java.util.Optional;
 public interface ICustomerService {
 	
 	
-    public Customer saveCustomer(Customer customer);
+    Customer saveCustomer(Customer customer);
     
-    public Customer updateCustomer(Customer customer);
+    Customer updateCustomer(Customer customer);
     
-    public void deleteCustomer(Integer id);
+    void deleteCustomer(Integer id);
     
-    public Optional<Customer> findCustomerById(Integer id);
+    Optional<Customer> findCustomerById(Integer id);
     
-    public boolean checkIfIdexists(Integer id);
+    boolean checkIfIdexists(Integer id);
     
-    public Customer findCustomerByEmail(String email);
+    Customer findCustomerByEmail(String email);
     
 
 }

@@ -10,16 +10,16 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IBookDao extends JpaRepository<Book, Integer>{
 	
-     public Book findByIsbnIgnoreCase(String isbn);
+     Book findByIsbnIgnoreCase(String isbn);
     
-     public List<Book> findByTitleLikeIgnoreCase(String title);
+     List<Book> findByTitleLikeIgnoreCase(String title);
     
        @Query("SELECT b "
             + "FROM Book b "
             + "INNER JOIN b.category cat "
             + "WHERE cat.code = :code"
           )
-    public List<Book> findByCategory(@Param(value="code") String codeCategory);
+       List<Book> findByCategory(@Param(value = "code") String codeCategory);
 
 }
 

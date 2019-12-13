@@ -35,11 +35,8 @@ public class LoanServiceImpl implements ILoanService{
 	@Override
 	public boolean checkIfLoanExists(SimpleLoanDTO simpleLoanDTO) {
 		Loan loan = loanDao.getLoanByCriteria(simpleLoanDTO.getBookId(), simpleLoanDTO.getCustomerId(), LoanStatus.OPEN);
-        if(loan != null) {
-            return true;
-        }
-        return false;
-	}
+        return loan != null;
+    }
 
 	@Override
 	public Loan saveLoan(Loan loan) {
